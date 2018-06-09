@@ -17,16 +17,6 @@ Install Quasar dependencias
 $ npm install
 ```
 
-There is a bug with quasar cordova repos, execute this in order to reinstall cordova mode and keep cordova config (Seen here: https://forum.quasar-framework.org/topic/2073/restore-from-git/6)
-
-```sh
-$ cp -r src-cordova src-cordova-bak
-$ quasar mode -r cordova
-$ quasar mode -a cordova
-$ rm -r src-cordova
-$ mv src-cordova-bak src-cordova
-```
-
 Install cordova dependencies
 
 ```sh
@@ -60,7 +50,9 @@ Once you have configured all stuf, just go to root path and execute
 $ quasar dev -m cordova -T [ios|android]
 ```
 
+## Build
 
+Read the official Quasar documentation about builing signed packages at https://quasar-framework.org/guide/cordova-build-commands.html#Building-for-Production
 
 
 
