@@ -15,7 +15,7 @@
 
         </div>
 
-        <div style="padding: 0 1rem 0 1rem" v-if="detail !== null">
+        <div style="padding: 0 1rem 2rem 1rem" v-if="detail !== null">
             <h4>IP:
                 <small>{{detail.ip}}</small>
             </h4>
@@ -31,6 +31,14 @@
             <h4>LAST UPDATE:
                 <small>{{detail.timestamp | date}}</small>
             </h4>
+
+
+            <q-btn @click="addKeep" v-if="!detail.keep" color="primary" label="Keep device" />
+            <q-btn @click="disableKeep" v-else color="secondary" label="Disable keeping" />
+
+
+
+
         </div>
     </q-page>
 </template>
@@ -79,6 +87,15 @@
                 if (desc !== null) {
                     this.$firebaseRefs.devices.child(this.detail['.key']).update({desc: desc}).then(this.detail.desc = desc)
                 }
+            },
+
+            addKeep: function () {
+                this.$firebaseRefs.devices.child(this.detail['.key']).update({keep: true}).then(this.detail.keep = true)
+            },
+
+            disableKeep: function () {
+
+                this.$firebaseRefs.devices.child(this.detail['.key']).update({keep: false}).then(this.detail.keep = false)
             }
 
         },
