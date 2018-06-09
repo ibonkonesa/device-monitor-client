@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Device monitor client",
   "productName": "Device Monitor Client",
-  "cordovaId": "com.ibonkonesa.devicemonitor",
+  "cordovaId": "XXXXX",
   "author": "Ibon <ibon.konesa@gmail.com>",
   "private": true,
   "scripts": {

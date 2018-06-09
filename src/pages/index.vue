@@ -42,6 +42,7 @@
 
     import Firebase from 'firebase'
 
+    //UPDATE THIS INFO
     let config = {
         apiKey: "",
         authDomain: "",
