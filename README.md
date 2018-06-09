@@ -39,7 +39,7 @@ You must choose an uniq app identifier (ex: com.ibonkonersa.device-monitor) when
 - src-cordova/package.json: Update name property
 - src-cordova/config.xml: Update widget id attribute
 
-Finally, in order to access to the realtime database, go to Firebase Project Console and create a web app. A config JSON will be created. Just place this data at src/pages/index.vue (just below import Firebase line)
+Finally, in order to access to the realtime database, go to Firebase Project Console and create a web app. A config variable will be created. Just place this data at src/config/env.dev.js
 
 
 ## Development

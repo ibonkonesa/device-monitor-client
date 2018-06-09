@@ -41,16 +41,9 @@
 <script>
 
     import Firebase from 'firebase'
+    import {config} from '../config/dev.env';
 
     //UPDATE THIS INFO
-    let config = {
-        apiKey: "",
-        authDomain: "",
-        databaseURL: "",
-        projectId: "",
-        storageBucket: "",
-        messagingSenderId: ""
-    };
 
     let app = Firebase.initializeApp(config);
     let db = app.database();
