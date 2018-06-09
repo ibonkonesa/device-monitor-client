@@ -29,7 +29,7 @@
             </h4>
 
             <h4>LAST UPDATE:
-                <small>{{detail.timestamp}}</small>
+                <small>{{detail.timestamp | date}}</small>
             </h4>
         </div>
     </q-page>
@@ -53,6 +53,13 @@
         name: 'PageIndex',
         firebase: {
             devices: devicesRef
+        },
+        filters: {
+            date: function (value) {
+                console.log(value);
+                let date = new Date(value*1000);
+                return date.toLocaleDateString()+' '+date.toLocaleTimeString();
+            },
         },
         data() {
             return {

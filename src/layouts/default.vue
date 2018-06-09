@@ -9,7 +9,7 @@
 
         <q-toolbar-title>
           Device Monitor
-          <div slot="subtitle">Running on Quasar v{{ $q.version }}</div>
+          <div slot="subtitle">Local network device tracker</div>
         </q-toolbar-title>
       </q-toolbar>
     </q-layout-header>
