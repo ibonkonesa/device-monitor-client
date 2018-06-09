@@ -41,7 +41,7 @@
 <script>
 
     import Firebase from 'firebase'
-    import {config} from '../config/dev.env';
+    import {config} from '../config/env';
 
     //UPDATE THIS INFO
 
