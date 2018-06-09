@@ -26,7 +26,7 @@ Clone this repository
 $ git clone https://github.com/ibonkonesa/device-monitor-client.git
 ```
 
-Install Quasar dependencias
+Install Quasar dependencies
 
 ```sh
 $ npm install
@@ -48,13 +48,13 @@ You have to create a GoogleService-Info.plist file if you want to compile to iOS
 
 Create Android or iOS in your Firebase Project Console and put this files at /src-cordova folder.
 
-You must choose an uniq app identifier (ex: com.ibonkonersa.device-monitor) when you add both apps. Then, you have to update some files with this identifier:
+You must choose an unique app identifier (ex: com.ibonkonesa.device-monitor) when you add both apps. Then, you have to update some files with this identifier:
 
 - package.json: Update cordovaId property
 - src-cordova/package.json: Update name property
 - src-cordova/config.xml: Update widget id attribute
 
-Finally, in order to access to the realtime database, go to Firebase Project Console and create a web app. 
+Finally, in order to access to the real time database, go to Firebase Project Console and create a web app. 
 
 A config variable will be created. Just place this data at src/config/env.js
 
@@ -73,7 +73,7 @@ config: {
 
 ## Development
 
-Once you have configured all stuf, just go to root path and execute
+Once you have configured all stuff, just go to root path and execute
 
 ```sh
 $ quasar dev -m cordova -T [ios|android]
@@ -81,7 +81,7 @@ $ quasar dev -m cordova -T [ios|android]
 
 ## Build
 
-Read the official Quasar documentation about builing signed packages at https://quasar-framework.org/guide/cordova-build-commands.html#Building-for-Production
+Read the official Quasar documentation about building signed packages at https://quasar-framework.org/guide/cordova-build-commands.html#Building-for-Production
 
 
 
