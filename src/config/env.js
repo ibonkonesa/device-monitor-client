@@ -9,4 +9,4 @@ module.exports = {
         messagingSenderId: "1030511689910"
     }
 
-}
+};

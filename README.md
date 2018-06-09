@@ -3,6 +3,21 @@
 This example shows how to integrate with Device Monitor Daemon https://github.com/ibonkonesa/device-monitor-daemon
 Based in Quasar Cordova project
 
+## Dependencies
+
+Quasar 
+
+```sh
+$ npm install -g quasar-cli
+```
+
+Cordova
+
+```sh
+$ npm install -g cordova
+```
+
+
 ## Install
 
 Clone this repository
@@ -39,7 +54,21 @@ You must choose an uniq app identifier (ex: com.ibonkonersa.device-monitor) when
 - src-cordova/package.json: Update name property
 - src-cordova/config.xml: Update widget id attribute
 
-Finally, in order to access to the realtime database, go to Firebase Project Console and create a web app. A config variable will be created. Just place this data at src/config/env.js
+Finally, in order to access to the realtime database, go to Firebase Project Console and create a web app. 
+
+A config variable will be created. Just place this data at src/config/env.js
+
+```sh
+config: {
+        apiKey: "",
+        authDomain: "",
+        databaseURL: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: ""
+    }
+
+```
 
 
 ## Development
