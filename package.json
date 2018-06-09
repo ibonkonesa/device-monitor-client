@@ -1,0 +1,29 @@
+{
+  "name": "device-monitor-client",
+  "version": "1.0.0",
+  "description": "Device monitor client",
+  "productName": "Device Monitor Client",
+  "cordovaId": "com.ibonkonesa.devicemonitor",
+  "author": "Ibon <ibon.konesa@gmail.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "firebase": "^5.0.4",
+    "vuefire": "^1.4.5"
+  },
+  "devDependencies": {
+    "quasar-cli": "^0.16.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}
