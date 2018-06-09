@@ -73,6 +73,10 @@
                     this.$q.notify(this.messages.find(item => item.topic === data.topic).message)
                 }
             });
+
+            //CLOSE SPLASHSCREEN!
+            navigator.splashscreen.hide();
+
         }
     }
 </script>
