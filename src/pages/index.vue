@@ -25,7 +25,7 @@
             </h4>
 
             <h4>DESC:
-                <small>{{detail.desc}}</small>
+                <small>{{detail.desc}} <font @click="setNewName" style="color: deepskyblue">change</font></small>
             </h4>
 
             <h4>LAST UPDATE:
@@ -57,8 +57,8 @@
         filters: {
             date: function (value) {
                 console.log(value);
-                let date = new Date(value*1000);
-                return date.toLocaleDateString()+' '+date.toLocaleTimeString();
+                let date = new Date(value * 1000);
+                return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
             },
         },
         data() {
@@ -69,6 +69,18 @@
                     {topic: 'deviceDelete', message: 'Device has left'},
                 ]
             }
+        },
+
+        methods: {
+
+            setNewName: function () {
+
+                let desc = prompt("Change description", this.detail.desc);
+                if (desc !== null) {
+                    this.$firebaseRefs.devices.child(this.detail['.key']).update({desc: desc}).then(this.detail.desc = desc)
+                }
+            }
+
         },
         created() {
             //REGISTER TO PUSH TOPICS
