@@ -32,7 +32,7 @@
 
 
             <h4>
-            Tap a device to see details
+                Tap a device to see details
             </h4>
 
         </div>
@@ -70,6 +70,7 @@
                     {topic: 'deviceDelete', message: 'Device has left'},
                 ],
                 newDesc: null,
+                isLoaded: false,
             }
         },
 
@@ -102,6 +103,17 @@
 
         },
         created() {
+
+            this.$watch('devices', function (newData) {
+                if (!this.isLoaded) {
+                    //WAIT FIREBASE DATA IS LOADED TO HIDE SPLASH SCREEN
+                    navigator.splashscreen.hide();
+                    this.isLoaded = true;
+                } else if (this.detail !== null) {
+                    //UPDATE DETAIL ITEM
+                    this.detail = newData.find(item => item.mac === this.detail.mac);
+                }
+            });
             //REGISTER TO PUSH TOPICS
             FCMPlugin.subscribeToTopic('deviceNew');
             FCMPlugin.subscribeToTopic('deviceDelete');
@@ -117,10 +129,6 @@
                     )
                 }
             });
-
-            //CLOSE SPLASHSCREEN!
-            navigator.splashscreen.hide();
-
         }
     }
 </script>
