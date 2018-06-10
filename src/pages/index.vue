@@ -28,6 +28,14 @@
             <q-btn @click="addKeep" v-if="!detail.keep" color="primary" label="Keep device"/>
             <q-btn @click="disableKeep" v-else color="secondary" label="Disable keeping"/>
         </div>
+        <div v-else style=" padding-top: 2em; text-align: center">
+
+
+            <h4>
+            Tap a device to see details
+            </h4>
+
+        </div>
     </q-page>
 </template>
 
